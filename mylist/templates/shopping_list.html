@@ -61,12 +61,13 @@
     <header>
         <h1>Einkaufsliste</h1>
     </header>
-    <div class="list-item">
-        <input type="checkbox" name="" id="">Element 1
-    </div>
-    <div class="list-item">
-        <input type="checkbox" name="" id="">Element 2
-    </div>
+
+    {% for row in all_items %}
+        <div class="list-item">
+            <input type="checkbox" name="" id=""> {{ row.name }}
+        </div>
+    {% endfor %}
+    
 
     <button onclick="addItem()">+</button>
 
@@ -76,7 +77,7 @@
             let token = '{{csrf_token}}';
             let formData = new FormData();
             formData.append('itemName', itemName);
-            formData.append('csrfmiddlewaretoken', token );
+            formData.append('csrfmiddlewaretoken', token);
 
             fetch('/mylist/', {
                 method: 'POST',
