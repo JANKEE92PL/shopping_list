@@ -1,3 +1,75 @@
-<h1>
-    Meine Einkaufsliste
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: rgba(0, 0, 0, .1);
+        }
+
+        header {
+            background-color: greenyellow;
+            display: flex;
+            padding-left: 20px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+            background-color: blue;
+            border: unset;
+            font-size: 32px;
+            color: white;
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            cursor: pointer;
+        }
+
+        .list-item {
+            height: 60px;
+            background-color: white;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid rgba(0, 0, 0, .1);
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Hello</h1>
+    </header>
+    <div class="list-item">
+        <input type="checkbox" name="" id="">Element 1
+    </div>
+    <div class="list-item">
+        <input type="checkbox" name="" id="">Element 2
+    </div>
+
+    <button>+</button>
+
+</body>
+
+</html>
